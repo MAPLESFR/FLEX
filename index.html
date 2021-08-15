@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FLEX</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="NewsContainer.css">
+  </head>
+  <body>
+    <header id="header">
+
+      <a href="#" class="logo">FLEX</a>
+      <ul>
+        
+        <li><a href="#" class="active">Accueil</a></li>
+        <li><a href="#">Boutique</a></li>
+        <li><a href="#">Webtoons</a></li>
+        <li><a href="#">Contacter</a></li>
+      </ul>
+
+    </header>
+
+    <!-- ONE SECTION -->
+
+    <section class="one">
+
+      
+
+      <!-- NEWS CONTAINERS -->
+
+      <h1 class="NewsTitle">Nouveautés</h1>
+
+      <!-- One Card -->
+
+      <div class="NewsContainer">
+        <div class="card">
+          <img src="rioo.png" id="mamadu">
+          <div class="card-item">
+            <h2>02</h2>
+            <h3>RIO MIX</h3>
+            <p>LE PLUS GROS NOOB DE L'HISTOIRE</p>
+            <p>Rien à dire à part qu'il est nul.</p>
+            <a href="#" id="copy" onclick="CopyElementTextContent(this)"> rio_mix#9999</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- One Card End -->
+
+      <!-- Two Card -->
+
+      <div class="NewsContainer">
+        <div class="card">
+          <img src="mamadu.png" id="mamadu">
+          <div class="card-item">
+            <h2>01</h2>
+            <h3>MBA</h3>
+            <p>Mamadu Bizarre Adventure               </p>
+            <p>Un webtoon inspiré de Jojo Bizarre Adventure crée par Necto.</p>
+            <a href="#">Prochainement..</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Card End -->
+
+
+      <!-- Tree Card -->
+
+      <div class="NewsContainer">
+        <div class="card">
+          <img src="shiny.png" id="mamadu">
+          <div class="card-item">
+            <h2>03</h2>
+            <h3>MAPLES</h3>
+            <p>MILLIADAIRE</p>
+            <p>10000000000000000000000X plus riche que asma</p>
+            <a href="#" id="card3copy" onclick="CopyElementTextContent(this)"> ᴍᴀᴘʟᴇs 水#0690</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tree Card End -->
+
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+      <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+          max: 25,
+          speed: 1000,
+          glare: true,
+          "max-glare": 1
+        });
+
+
+        </script>
+
+        <!-- NEWS CONTAINERS END -->
+
+
+
+
+      <img src="background.jpg" id="background">
+      
+    </section>
+
+    <!-- ONE SECTION END -->
+
+
+
+    <!-- TWO SECTION -->
+
+
+    <section class="two">
+
+      
+
+      
+    </section>
+
+
+    <!-- TWO SECTION END-->
+
+
+
+     
+        <!-- SCROLL SCRIPT -->
+
+    <script>
+      let background = document.getElementById('background');
+      let header = document.getElementById('header');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        background.style.top = value * 0.25 + 'px';
+        header.style.top = value * 0.5 + 'px';
+
+      })
+
+    </script>
+
+         <!-- SCROLL SCRIPT END -->
+
+         <!-- Copy Card Content Fonction -->
+  
+<script>
+
+        function CopyElementTextContent(text){
+        var content = text.innerHTML;
+
+
+       navigator.clipboard.writeText(content)
+        .then(() => {
+        console.log("Text copié dans le presse papier...")
+    })
+        .catch(err => {
+        console.log('Quelque chose s\'est mal passé', err);
+    })
+
+    
+ 
+}   
+
+</script>
+
+      <!-- Copy Card Content Fonction End -->
+
+  </body>
+</html>
